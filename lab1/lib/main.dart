@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
-  runApp(CounterApp());
+  runApp(const CounterApp());
 }
 
 class CounterApp extends StatelessWidget {
@@ -9,15 +9,24 @@ class CounterApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp (
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lam Quen Flutter'),
+          title: const Text('Lam Quen Flutter'),
         ),
-        body: const Center(
-      child: Text(' Phạm Quốc Huy - 2021050320 Hello, Wrold!'),
-     
-    ),
+        body: Center(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text ('Phạm Quốc Huy - 2021050320'),
+            const SizedBox(height: 20),
+            Image.asset(
+              'assets/images/chuot.png',
+            height: 200,
+            width: 200,
+            )
+          ],
+        )),
       ),
     );
   }
